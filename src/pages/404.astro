@@ -1,0 +1,16 @@
+---
+// Prerendered on purpose: when the custom 404 is prerendered (or absent), an
+// unmatched SSR request has no `routeData`. On the composable path the
+// middleware layer then throws on the missing route instead of rendering this
+// page. See `/nope`.
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="en">
+	<head><meta charset="utf-8" /><title>Custom 404</title></head>
+	<body>
+		<h1>Custom 404 page</h1>
+		<p>This is src/pages/404.astro (prerendered).</p>
+	</body>
+</html>

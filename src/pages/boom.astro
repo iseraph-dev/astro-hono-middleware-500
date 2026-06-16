@@ -1,0 +1,12 @@
+---
+// A real page so `/boom` resolves to a route (it has `routeData`). The request
+// never reaches this template: src/middleware.ts throws for `/boom` first. This
+// keeps `/boom` a middleware-throw case even when a prerendered 404.astro is
+// present (which leaves unmatched routes with no `routeData`).
+---
+
+<!doctype html>
+<html lang="en">
+	<head><meta charset="utf-8" /><title>unreachable</title></head>
+	<body><p>unreachable - the middleware throws before this renders</p></body>
+</html>
