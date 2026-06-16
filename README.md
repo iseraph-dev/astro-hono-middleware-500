@@ -1,5 +1,7 @@
 # astro-hono-middleware-500
 
+Reproduction for [withastro/astro#17092](https://github.com/withastro/astro/issues/17092).
+
 Minimal reproduction: on the composable `astro/hono` path, an error thrown by
 `src/middleware.ts` is not rendered as the custom `500.astro`. It escapes to the host
 framework (Hono), which answers with its default plain-text `Internal Server Error`.
