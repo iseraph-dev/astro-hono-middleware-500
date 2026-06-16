@@ -1,0 +1,21 @@
+---
+interface Props {
+	error?: unknown;
+}
+
+const { error } = Astro.props as Props;
+const message = error instanceof Error ? error.message : String(error ?? '');
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Custom 500</title>
+	</head>
+	<body>
+		<h1>Custom 500 page</h1>
+		<p>This is src/pages/500.astro.</p>
+		<pre>{message}</pre>
+	</body>
+</html>

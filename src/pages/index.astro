@@ -1,0 +1,17 @@
+---
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Home</title>
+	</head>
+	<body>
+		<h1>Home (200 OK)</h1>
+		<ul>
+			<li><a href="/page-throws">/page-throws</a> - page render throw, renders custom 500.astro (fixed by #17041)</li>
+			<li><a href="/boom">/boom</a> - middleware throw, hits Hono's default 500 (the bug)</li>
+		</ul>
+	</body>
+</html>
